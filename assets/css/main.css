@@ -1800,7 +1800,7 @@
 		font-weight: 300;
 		letter-spacing: 0em;
 		margin: 0 0 1em 0;
-		text-transform: capitalize;
+		text-transform: none;
 	}
 
     h2 {
@@ -1817,9 +1817,10 @@
 
 		h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
 			margin: 0 0 1em 0;
-            padding-bottom: 1em;
+            padding-bottom: 0.5em;
 			border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 		}
+
 
 	h2 {
 		font-size: 2em;
@@ -1830,7 +1831,7 @@
 	}
 
 	h4 {
-		font-size: 0.7em;
+		font-size: 1.2em;
 	}
 
 	h5 {
@@ -3078,6 +3079,7 @@
 		#menu .links {
 			list-style: none;
 			margin-bottom: 1.5em;
+            margin-top: 1.5em;
 			padding: 0;
 		}
 
