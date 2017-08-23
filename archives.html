@@ -228,8 +228,8 @@ RskH942VWDw-->
 			        videos[i].src = 'http://i.ytimg.com/vi/' + videos[i].id + '/mqdefault.jpg';
 			        // Overlay the Play icon to make it look like a video player
 			        var play = document.createElement("div");
-			        play.setAttribute("class","play");
-			        videos[i].appendChild(play);
+			        play.setAttribute("class","play"); 
+                    videos[i].parentNode.appendChild(play);
 
 			        videos[i].onclick = function() {
 			            // Create an iFrame with autoplay set to true
@@ -240,8 +240,8 @@ RskH942VWDw-->
 			            iframe.setAttribute("frameborder",'0');
 
 			            // The height and width of the iFrame should be the same as parent
-			            iframe.style.width  = this.style.width;
-			            iframe.style.height = this.style.height;
+			            iframe.style.width  = "100%";
+			            iframe.style.height = "250px";
 
 			            // Replace the YouTube thumbnail with YouTube Player
 			            this.parentNode.replaceChild(iframe, this);
