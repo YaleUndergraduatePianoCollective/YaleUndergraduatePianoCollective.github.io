@@ -3146,12 +3146,6 @@
 
 	#banner {
 		padding: 10em 0 4.75em 0 ;
-        background-color: #2e3141;
-        background-image: linear-gradient(to top, rgba(46, 49, 65, 0.9), rgba(46, 49, 65, 0.9)), url("images/rachop3no2.png");
-        background-attachment: fixed;
-        background-size: auto, cover;
-        background-position: center, center;
-
 	}
 
 		#banner .inner {
@@ -3246,6 +3240,11 @@
 
 			#banner {
 				padding: 7em 0 8.25em 0 ;
+				background-color: #2e3141;
+				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.9), rgba(46, 49, 65, 0.9)), url("images/rachop3no2.png");
+                background-attachment: fixed;
+				background-size: auto, cover;
+				background-position: center, center;
 				margin-bottom: -6.5em;
 			}
 
