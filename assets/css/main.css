@@ -2936,10 +2936,20 @@
 		@media screen and (max-width: 736px) {
 
 			#header {
-				height: 2.75em;
-				line-height: 2.75em;
+				height: 3em;
+				line-height: 3em;
+                font-size: .5em;
 			}
+                #header nav a[href="#menu"] {
+                    box-shadow: none;
+                    padding: 0 1em;
+                    border-radius: 0;
+            }
 
+        }
+            
+
+/*
 				#header nav {
 					top: 0;
 					right: 0;
@@ -2985,6 +2995,8 @@
 				}
 
 		}
+*/
+
 
 /* Menu */
 
