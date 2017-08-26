@@ -3928,10 +3928,6 @@
 			width: calc(50% - 1.5em);
 		}
 
-		#footer field {
-			width: 100px;
-		}
-
 		#footer .inner .copyright {
 			border-top: solid 2px rgba(255, 255, 255, 0.125);
 			list-style: none;
@@ -4045,5 +4041,13 @@
 		#footer .inner {
 			padding: 2em 1.5em 0.1em 1.5em ;
 		}
+        
+        #footer .inner form input[type="text"] {
+            width: 100%;
+        }
+        
+        #footer .inner form input[type="email"] {
+            width: 100%;
+        }
 
 	}
