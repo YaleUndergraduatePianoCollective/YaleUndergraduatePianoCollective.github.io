@@ -3007,8 +3007,9 @@
                         }
 
                         #header.alt nav a[href="#menu"] {
-                            display: block;
+                            display: inline-block;
                             width: 25%;
+                            float: right;
                         }
 
                             #header.alt nav a:before {
@@ -3498,7 +3499,7 @@
 	.wrapper {
 		background-color: #4c5c96;
 		margin: 6.5em 0;
-		position: relative;
+		position: relative; 
 	}
 
 		.wrapper:before, .wrapper:after {
