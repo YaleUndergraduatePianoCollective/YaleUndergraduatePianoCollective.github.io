@@ -3921,11 +3921,15 @@
 
 		#footer .inner .info {
 			margin: 0 3em 0 0;
-			width: calc(50% - 1.5em);*/
+            width: 100%;
 		}
 
 		#footer .inner form {
 			width: calc(50% - 1.5em);
+		}
+
+		#footer field {
+			width: 100px;
 		}
 
 		#footer .inner .copyright {
