@@ -2835,6 +2835,8 @@
 
 /* Header */
 
+/* Header */
+
 	#header {
 		-moz-transition: background-color 0.2s ease-in-out;
 		-webkit-transition: background-color 0.2s ease-in-out;
@@ -2867,18 +2869,18 @@
 				border: 0;
 			}
 
-		#header nav {
-			font-family: 'Roboto Slab', Helvetica, sans-serif;
-			font-size: 0.8em;
-			font-weight: 700;
-			height: 3em;
-			letter-spacing: 0.1em;
-			line-height: 3em;
-			position: absolute;
-			right: 0.7em;
-			text-transform: uppercase;
-			top: 0.7em;
-		}
+			#header nav {
+				font-family: 'Roboto Slab', Helvetica, sans-serif;
+				font-size: 0.8em;
+				font-weight: 700;
+				height: 3em;
+				letter-spacing: 0.1em;
+				line-height: 3em;
+				text-transform: uppercase;
+				position: absolute;
+				top: 0.7em;
+				right: 0.7em;
+			}
 
 			#header nav a {
 				border: 0;
@@ -2888,10 +2890,9 @@
 
 				#header nav a:before {
 					float: left;
-					margin-right: 0.5em;
 				}
 
-				#header nav a[href="#menu"] {
+				#header nav a {
 					text-decoration: none;
 					-moz-transition: background-color 0.2s ease-in-out;
 					-webkit-transition: background-color 0.2s ease-in-out;
@@ -2900,9 +2901,14 @@
 					border-radius: 5px;
 					box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
 					padding: 0 1.35em;
+					display: none;
 				}
 
-					#header nav a[href="#menu"]:before {
+				#header nav a[href="#menu"] {
+					display: block;
+				}
+
+					#header nav a:before {
 						-moz-osx-font-smoothing: grayscale;
 						-webkit-font-smoothing: antialiased;
 						font-family: FontAwesome;
@@ -2912,20 +2918,22 @@
 					}
 
 					#header nav a[href="#menu"]:before {
-                        font-size: 1.7em;
+						font-size: 1.7em;
 						content: "\1D11E";
+						padding-right: 13px;
 					}
 
-					#header nav a[href="#menu"]:hover {
+					#header nav a:hover {
 						background-color: rgba(255, 255, 255, 0.15);
 					}
 
-					#header nav a[href="#menu"]:active {
-						background-color: rgba(255, 255, 255, 0.2);
+					#header nav a:active {
+						background-color: rgba(255, 255, 255, 0.25);
 					}
 
 		#header.alt {
 			background-color: transparent;
+			position: absolute;
 		}
 
 			#header.alt h1 {
@@ -2933,31 +2941,118 @@
 				visibility: hidden;
 			}
 
-		@media screen and (max-width: 736px) {
-
-			#header {
+			#header.alt nav {
+				font-family: 'Josefin Sans', Helvetica, sans-serif;
+				font-size: 0.7em;
+				font-weight: 700;
 				height: 3em;
+				letter-spacing: 0.1em;
 				line-height: 3em;
+				text-transform: uppercase;
+				position: absolute;
+				width: 100%;
+				top: 0.7em;
+				padding-left: 15px;
+			}
+
+			#header.alt nav a {
+				border: 0;
+				display: inline-block;
+				width: 16.3%;
+				text-align: center;
+			}
+
+			#header.alt nav a[href="#menu"] {
+				display: none;
+			}
+
+        @media screen and (max-width: 1000px) {
+            #header.alt {
+                width: 100%;
+            }
+            
+            #header.alt nav {
+                        font-family: 'Roboto Slab', Helvetica, sans-serif;
+                        font-size: 1em;
+                        font-weight: 700;
+                        height: 3em;
+                        letter-spacing: 0.1em;
+                        line-height: 3em;
+                        text-transform: uppercase;
+                        position: absolute;
+                        top: 0.7em;
+                        right: 0.7em;
+                    }
+
+                    #header.alt nav a {
+                        border: 0;
+                        display: inline-block;
+                        padding: 0 1em;
+                    }
+
+                        #header.alt nav a:before {
+                            float: left;
+                        }
+
+                        #header.alt nav a {
+                            text-decoration: none;
+                            -moz-transition: background-color 0.2s ease-in-out;
+                            -webkit-transition: background-color 0.2s ease-in-out;
+                            -ms-transition: background-color 0.2s ease-in-out;
+                            transition: background-color 0.2s ease-in-out;
+                            border-radius: 5px;
+                            box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
+                            padding: 0 1.35em;
+                            display: none;
+                        }
+
+                        #header.alt nav a[href="#menu"] {
+                            display: block;
+                            width: 25%;
+                        }
+
+                            #header.alt nav a:before {
+                                -moz-osx-font-smoothing: grayscale;
+                                -webkit-font-smoothing: antialiased;
+                                font-family: FontAwesome;
+                                font-style: normal;
+                                font-weight: normal;
+                                text-transform: none !important;
+                            }
+
+                            #header.alt nav a[href="#menu"]:before {
+                                content: none;
+                            }
+
+                            #header.alt nav a:hover {
+                                background-color: rgba(255, 255, 255, 0.15);
+                            }
+
+                            #header.alt nav a:active {
+                                background-color: rgba(255, 255, 255, 0.25);
+                            }
+        }
+
+
+		@media screen and (max-width: 530px) {
+            #header {
+				height: 2.75em;
+				line-height: 2.75em;
                 font-size: .5em;
 			}
-                #header nav a[href="#menu"] {
-                    box-shadow: none;
-                    padding: 0 1em;
-                    border-radius: 0;
-            }
 
-        }
-            
-
-/*
 				#header nav {
 					top: 0;
-					right: 0;
 					height: inherit;
 					line-height: inherit;
 				}
 
-					#header nav a {
+				#header nav a[href="#menu"]:before {
+					content: none;
+					padding-right: 0;
+				}
+
+					/* #header nav a {
 						height: inherit;
 						line-height: inherit;
 					}
@@ -2965,23 +3060,16 @@
 						#header nav a[href="#menu"] {
 							box-shadow: none;
 							padding: 0 1em;
-							border-radius: 0;
+							border-radius: 0;              
+                            width: 4em;
+                            white-space: nowrap;
+                            text-indent: 4em;
+                            position: relative;
 						}
 
 							#header nav a[href="#menu"]:hover, #header nav a[href="#menu"]:active {
 								background-color: inherit;
 							}
-
-		}
-
-		@media screen and (max-width: 640px) {
-
-			#header nav a[href="#menu"] {
-				width: 4em;
-				white-space: nowrap;
-				text-indent: 4em;
-				position: relative;
-			}
 
 				#header nav a[href="#menu"]:before {
 					width: inherit;
@@ -2992,10 +3080,9 @@
 					text-align: right;
 					margin-left: 0;
 					padding-right: 1.25em;
-				}
+				} */
 
 		}
-*/
 
 
 /* Menu */
@@ -3251,7 +3338,7 @@
 		@media screen and (max-width: 1280px) {
 
 			#banner {
-				padding: 7em 0 8.25em 0 ;
+				padding: 5em 0 6.25em 0 ;
 				background-color: #2e3141;
 				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.9), rgba(46, 49, 65, 0.9)), url("images/rachop3no2.png");
                 background-attachment: fixed;
