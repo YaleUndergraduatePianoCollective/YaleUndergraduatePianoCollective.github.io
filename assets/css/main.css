@@ -4033,6 +4033,10 @@
 			#footer .inner .copyright li:first-child {
 				margin-top: 0;
 			}
+ 
+        #footer .inner form input[type="submit"] {
+            width: 30%;
+        }
 
 	}
 
@@ -4050,4 +4054,8 @@
             width: 100%;
         }
 
+        #footer .inner form input[type="submit"] {
+            width: 35%;
+        }
+        
 	}
