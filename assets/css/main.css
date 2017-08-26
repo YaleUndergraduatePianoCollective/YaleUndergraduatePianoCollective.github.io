@@ -3335,7 +3335,7 @@
             text-align: center;
 		}
 
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 3000px) {
 
 			#banner {
 				padding: 5em 0 6.25em 0 ;
@@ -3447,7 +3447,7 @@
 			text-transform: uppercase;
 		}
 
-	@media screen and (max-width: 1280px) {
+	@media screen and (max-width: 3000px) {
 
 		#wrapper > header {
 			padding: 9em 0 6.25em 0 ;
@@ -3493,6 +3493,7 @@
 			}
 
 	}
+
 
 	.wrapper {
 		background-color: #4c5c96;
@@ -3955,7 +3956,7 @@
 					color: inherit;
 				}
 
-	@media screen and (max-width: 1280px) {
+	@media screen and (max-width: 3000px) {
 
 		#footer {
 			background-color: #2e3141;
