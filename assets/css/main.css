@@ -4041,3 +4041,8 @@
 		}
 
 	}
+
+
+    .h_iframe        {position:relative;}
+    .h_iframe .ratio {display:block;width:100%;height:auto;}
+    .h_iframe iframe {position:absolute; top:0; left:7.5%; width:85%;height:500px}
