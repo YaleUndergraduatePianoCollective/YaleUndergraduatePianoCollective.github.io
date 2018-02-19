@@ -20,6 +20,7 @@
 		vertical-align: baseline;
 	}
 
+
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
@@ -3558,6 +3559,10 @@
 			margin: 0 auto;
 			width: 55em;
 		}
+
+        .wrapper .inner program {
+            padding: 0em 5em 0em 5em;
+        }
 
 		.wrapper.style2 {
 			background-color: #45558d;
