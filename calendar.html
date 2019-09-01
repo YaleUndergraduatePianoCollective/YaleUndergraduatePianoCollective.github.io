@@ -148,7 +148,25 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-
+			<script>
+			    function eventvalidate() {
+                    		$(".error").remove();
+                    		$("input").removeAttr("style");
+                    		var error = false;
+                    		if(document.forms["eventform"]["contact-name"].value=="") {
+                       			badField(document.getElementById("contact-name"), "Must not be empty");
+                        		error = true;
+                    		}
+                    		if(document.forms["eventform"]["email"].value=="") {
+					badField(document.getElementById("email"), "Must not be empty");
+                        		error = true;
+                    		}
+				if(document.forms["eventform"]["description"].value=="") {
+					badField(document.getElementById("description"), "Must not be empty");
+					error = true;
+				    }
+                    		return !error;
+                	   }
 
 	</body>
 </html>
