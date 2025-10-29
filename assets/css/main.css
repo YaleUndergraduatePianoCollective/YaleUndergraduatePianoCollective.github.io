@@ -4130,22 +4130,42 @@
 
 .event-title, .event-meta { margin: 0 0 8px; }
 
-/* Keep the three masterclass videos on one line */
+/* Three-on-one-line just for the masterclass row */
 #masterclass-videos {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: nowrap;         /* no wrapping */
+  display: flex;            /* override theme's block at <=640px */
+  flex-wrap: nowrap;        /* no wrapping */
+  gap: 2rem;                /* spacing between the three cards */
   align-items: stretch;
-  overflow-x: auto;          /* horizontal scroll on small screens */
+  overflow-x: auto;         /* scroll on very narrow screens */
   -webkit-overflow-scrolling: touch;
 }
+
 #masterclass-videos article {
-  flex: 0 0 calc((100% - 4rem) / 3); /* three equal columns */
-  min-width: 18rem;                  /* prevents squishing */
+  margin: 0;                                /* neutralize theme margins */
+  width: auto;                               /* cancel theme 50% width */
+  flex: 0 0 calc((100% - 4rem) / 3);         /* 3 equal columns with 2 gaps */
 }
+
+/* Remove the bleed/negative margins only in this row */
+#masterclass-videos article .image {
+  margin: 0;
+  width: 100%;
+}
+
+/* Uniform media box sizing */
 #masterclass-videos .image img.youtube,
 #masterclass-videos iframe {
   width: 100%;
   height: 250px;
   object-fit: cover;
+}
+
+/* Cancel the theme's 2-column nth-child tweak for this row */
+#masterclass-videos.features article:nth-child(2n) {
+  margin-right: 0;
+}
+
+/* Optional: at very small widths keep one line with scroll */
+@media screen and (max-width: 640px) {
+  #masterclass-videos { display: flex; }     /* re-override theme's display:block */
 }
