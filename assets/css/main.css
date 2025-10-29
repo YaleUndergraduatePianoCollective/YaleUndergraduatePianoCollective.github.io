@@ -4129,3 +4129,23 @@
 }
 
 .event-title, .event-meta { margin: 0 0 8px; }
+
+/* Keep the three masterclass videos on one line */
+#masterclass-videos {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: nowrap;         /* no wrapping */
+  align-items: stretch;
+  overflow-x: auto;          /* horizontal scroll on small screens */
+  -webkit-overflow-scrolling: touch;
+}
+#masterclass-videos article {
+  flex: 0 0 calc((100% - 4rem) / 3); /* three equal columns */
+  min-width: 18rem;                  /* prevents squishing */
+}
+#masterclass-videos .image img.youtube,
+#masterclass-videos iframe {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
