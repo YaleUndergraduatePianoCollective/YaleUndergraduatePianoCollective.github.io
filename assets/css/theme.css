@@ -1,0 +1,433 @@
+/* =============================================
+   YUPC Theme — Yale Blue + White
+   ============================================= */
+
+/* ---- Google Fonts ---- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+/* ---- Root variables ---- */
+:root {
+    --yale-blue:       #00356b;
+    --yale-blue-light: #1a5799;
+    --yale-blue-pale:  #eef2f9;
+    --text-dark:       #1a1a1a;
+    --text-mid:        #555555;
+    --bg-white:        #ffffff;
+    --bg-light:        #f7f8fc;
+    --bg-mid:          #eef2f9;
+    --header-bg:       #111111;
+    --footer-bg:       #111111;
+}
+
+/* =============================================
+   GLOBAL
+   ============================================= */
+
+body, input, select, textarea {
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+    background-image: none !important;
+    font-family: 'Open Sans', 'Josefin Sans', Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-dark);
+}
+
+h2, h2.major {
+    color: var(--yale-blue) !important;
+    font-weight: 700 !important;
+}
+
+strong, b {
+    color: var(--text-dark);
+}
+
+p {
+    color: var(--text-dark);
+}
+
+a {
+    color: var(--yale-blue);
+    border-bottom-color: rgba(0, 53, 107, 0.2);
+}
+
+a:hover {
+    color: var(--yale-blue-light) !important;
+}
+
+h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
+    border-bottom-color: rgba(0, 53, 107, 0.3);
+}
+
+hr {
+    border-color: rgba(0, 53, 107, 0.15);
+}
+
+/* =============================================
+   HEADER / NAV  (stays dark)
+   ============================================= */
+
+#header {
+    background-color: var(--header-bg) !important;
+}
+
+#header.alt {
+    background-color: var(--header-bg) !important;
+}
+
+/* Keep all header text white */
+#header h1,
+#header h1 a,
+#header nav a {
+    color: #ffffff !important;
+}
+
+#header nav a:hover,
+#header.alt nav a:hover {
+    color: var(--yale-blue-light) !important;
+}
+
+/* =============================================
+   HERO BANNER  (dark + Hendrie Hall image)
+   ============================================= */
+
+#banner {
+    background-color: transparent !important;
+    background-image: url("../../all_images/hendrie_hall.jpg") !important;
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+#banner h2,
+#banner p {
+    color: #ffffff;
+}
+
+/* =============================================
+   REMOVE SVG CHEVRONS — clean flat sections
+   ============================================= */
+
+.wrapper:before,
+.wrapper:after {
+    display: none !important;
+}
+
+.wrapper {
+    margin: 0 !important;
+    border-top: 1px solid rgba(0, 53, 107, 0.08);
+}
+
+/* =============================================
+   WRAPPER / SECTION BACKGROUNDS
+   ============================================= */
+
+.wrapper {
+    background-color: var(--bg-white) !important;
+}
+
+.wrapper.style2 {
+    background-color: var(--bg-light) !important;
+}
+
+.wrapper.style3 {
+    background-color: var(--bg-mid) !important;
+}
+
+.wrapper.style4 {
+    background-color: var(--bg-light) !important;
+}
+
+.wrapper.style5,
+.wrapper.style6 {
+    background-color: var(--bg-white) !important;
+}
+
+/* Spotlight sections */
+.wrapper.spotlight {
+    background-color: var(--bg-white) !important;
+}
+
+.wrapper.spotlight.style2 {
+    background-color: var(--bg-light) !important;
+}
+
+.wrapper.spotlight.style3 {
+    background-color: var(--bg-mid) !important;
+}
+
+.wrapper.spotlight.style4,
+.wrapper.spotlight.style5,
+.wrapper.spotlight.style6,
+.wrapper.spotlight.style7 {
+    background-color: var(--bg-light) !important;
+}
+
+/* Promo video section */
+#promo-video {
+    background: var(--bg-light) !important;
+}
+
+#promo-video h2 {
+    color: var(--yale-blue) !important;
+}
+
+/* =============================================
+   EVENT BOXES
+   ============================================= */
+
+.event-box {
+    border-color: rgba(0, 53, 107, 0.18) !important;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 53, 107, 0.08) !important;
+}
+
+.event-box h3,
+.event-title {
+    color: var(--text-dark);
+}
+
+.event-meta {
+    color: var(--text-mid);
+}
+
+/* =============================================
+   BUTTONS
+   ============================================= */
+
+input[type="submit"].special,
+input[type="reset"].special,
+input[type="button"].special,
+button.special,
+.button.special {
+    background-color: var(--yale-blue) !important;
+    color: #ffffff !important;
+}
+
+input[type="submit"].special:hover,
+input[type="reset"].special:hover,
+input[type="button"].special:hover,
+button.special:hover,
+.button.special:hover {
+    background-color: var(--yale-blue-light) !important;
+}
+
+input[type="submit"].special:active,
+input[type="reset"].special:active,
+input[type="button"].special:active,
+button.special:active,
+.button.special:active {
+    background-color: #002a55 !important;
+}
+
+input[type="submit"]:not(.special),
+input[type="reset"]:not(.special),
+input[type="button"]:not(.special),
+button:not(.special),
+.button:not(.special) {
+    background: var(--bg-white);
+    color: var(--text-dark);
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"]:not(.special):hover,
+button:not(.special):hover,
+.button:not(.special):hover {
+    box-shadow: inset 0 0 0 2px var(--yale-blue);
+    color: var(--yale-blue);
+}
+
+/* "Learn more" special links */
+a.special:not(.button) {
+    color: var(--yale-blue) !important;
+}
+
+a.special:not(.button):before {
+    border-color: rgba(0, 53, 107, 0.25);
+}
+
+/* =============================================
+   FEATURES ARTICLES
+   ============================================= */
+
+.features article {
+    background-color: var(--bg-light) !important;
+}
+
+.features article h3,
+.features article p {
+    color: var(--text-dark);
+}
+
+/* =============================================
+   MENU (mobile overlay panel)
+   ============================================= */
+
+#menu {
+    background: rgba(0, 0, 0, 0.55) !important;
+}
+
+#menu .inner {
+    background: #ffffff !important;
+}
+
+#menu h2 {
+    color: var(--text-dark) !important;
+    border-bottom-color: rgba(0, 53, 107, 0.3) !important;
+}
+
+#menu .links li a {
+    color: var(--text-dark) !important;
+}
+
+#menu .links li a:hover {
+    background: rgba(0, 53, 107, 0.07) !important;
+    color: var(--yale-blue) !important;
+}
+
+#menu .close {
+    filter: invert(1);
+}
+
+/* =============================================
+   SUB-PAGE WRAPPER HEADER (keeps dark photo)
+   ============================================= */
+
+#wrapper > header {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    background-attachment: unset !important;
+    padding: 3.5em 2em 2.5em 2em !important;
+    margin-bottom: 0 !important;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 53, 107, 0.1);
+}
+
+#wrapper > header h2 {
+    color: var(--yale-blue) !important;
+    font-size: 2.5em;
+    font-weight: 700 !important;
+    margin-bottom: 0.4em;
+}
+
+#wrapper > header h3 {
+    color: var(--text-mid) !important;
+    font-size: 1em;
+    font-weight: 600 !important;
+    margin-bottom: 0.4em;
+}
+
+#wrapper > header p {
+    color: var(--text-mid) !important;
+    font-size: 0.85em;
+    font-weight: 600 !important;
+    letter-spacing: 0.08em;
+    margin-bottom: 0;
+}
+
+/* =============================================
+   FOOTER  (dark)
+   ============================================= */
+
+#footer {
+    background-color: var(--footer-bg) !important;
+    background-image: none !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+#footer .inner {
+    padding: 2em 3em !important;
+}
+
+#footer h2.major {
+    margin-bottom: 0.6em !important;
+}
+
+#footer p.info,
+#footer .info {
+    margin-bottom: 0.4em !important;
+}
+
+#footer ul {
+    margin-bottom: 0.8em !important;
+}
+
+#footer ul li {
+    margin-bottom: 0.3em !important;
+    padding: 0 !important;
+}
+
+#footer .inner .copyright {
+    margin-top: 0.8em !important;
+    padding-top: 0 !important;
+}
+
+#footer h2,
+#footer h3,
+#footer strong {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+#footer,
+#footer p,
+#footer li,
+#footer .info {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+#footer a {
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+#footer a:hover {
+    color: #ffffff !important;
+    border-bottom-color: transparent;
+}
+
+#footer h2.major {
+    border-bottom: none !important;
+    color: #ffffff !important;
+}
+
+#footer .inner .copyright {
+    border-top: none !important;
+}
+
+#footer .inner .copyright li {
+    border-left-color: rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.35);
+}
+
+/* =============================================
+   PAGINATION
+   ============================================= */
+
+ul.pagination li > .page.active {
+    background-color: var(--yale-blue) !important;
+}
+
+/* =============================================
+   FORM ELEMENTS
+   ============================================= */
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.15);
+    color: var(--text-dark);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: var(--yale-blue);
+    box-shadow: 0 0 0 2px rgba(0, 53, 107, 0.12);
+}
