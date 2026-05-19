@@ -22,7 +22,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="index.html"><img src="images/undergrad_logo.png" alt="YUPC" /></a></h1>
+						<h1><a href="index.html"><img src="images/homepage_photos/undergrad_logo.png" alt="YUPC" /></a></h1>
 						<nav>
 							<a href="about.html">About</a>
 							<a href="events.html">Events</a>
@@ -59,6 +59,16 @@
 								<p>Photos and recordings from YUPC performances and masterclasses</p>
 							</div>
 						</header>
+
+					<!-- Photo Wall -->
+					<section id="photowall_photos" class="wrapper style1">
+						<div class="inner">
+							<h2 class="major">Photo Wall :)</h2>
+							<div class="photowall_photos-grid" id="photowall_photos-grid">
+								<!-- Photos are loaded dynamically from the images/photowall_photos/ folder -->
+							</div>
+						</div>
+					</section>
 
                     <section id="concert-archives" class="wrapper style2 alt">
                         <div class="inner">
@@ -332,16 +342,16 @@
                                 <button class="slider-btn slider-prev">&#8249;</button>
                                 <div class="slider-viewport">
                                     <div class="slider-track">
-                                        <div class="slide"><img src="images/Aerial view.jpg" alt="Aerial view"></div>
-                                        <div class="slide"><img src="images/Alan Chiang and Ece Bozkurt.jpg" alt="Alan Chiang and Ece Bozkurt"></div>
-                                        <div class="slide"><img src="images/Allen Chang and James Carrabino.jpg" alt="Allen Chang and James Carrabino"></div>
-                                        <div class="slide"><img src="images/Mahima Kumara and Allison Song.jpg" alt="Mahima Kumara and Allison Song"></div>
-                                        <div class="slide"><img src="images/Rishi Mirchandani and James Carrabino.jpg" alt="Rishi Mirchandani and James Carrabino"></div>
-                                        <div class="slide"><img src="images/Roger Sheu and John Mori.jpg" alt="Roger Sheu and John Mori"></div>
-                                        <div class="slide"><img src="images/Vivian Xu (Front L), James Carrabino (Back L), Stefan Jones (Front R), Allen Chang (Back R).jpg" alt="Vivian Xu, James Carrabino, Stefan Jones, Allen Chang"></div>
-                                        <div class="slide"><img src="images/Vivian Xu, James Carrabino, Allen Chang, Stefan Jones.jpg" alt="Vivian Xu, James Carrabino, Allen Chang, Stefan Jones"></div>
-                                        <div class="slide"><img src="images/Yasheen Gao and Laura Street.png" alt="Yasheen Gao and Laura Street"></div>
-                                        <div class="slide"><img src="images/Zeynep Karacan and Kenneth Xu.jpg" alt="Zeynep Karacan and Kenneth Xu"></div>
+                                        <div class="slide"><img src="images/suites_and_sweets_photos/Aerial view.jpg" alt="Aerial view"></div>
+                                        <div class="slide"><img src="images/suites_and_sweets_photos/Alan Chiang and Ece Bozkurt.jpg" alt="Alan Chiang and Ece Bozkurt"></div>
+                                        <div class="slide"><img src="images/suites_and_sweets_photos/Allen Chang and James Carrabino.jpg" alt="Allen Chang and James Carrabino"></div>
+                                        <div class="slide"><img src="images/suites_and_sweets_photos/Mahima Kumara and Allison Song.jpg" alt="Mahima Kumara and Allison Song"></div>
+                                        <div class="slide"><img src="images/suites_and_sweets_photos/Rishi Mirchandani and James Carrabino.jpg" alt="Rishi Mirchandani and James Carrabino"></div>
+                                        <div class="slide"><img src="images/suites_and_sweets_photos/Roger Sheu and John Mori.jpg" alt="Roger Sheu and John Mori"></div>
+                                        <div class="slide"><img src="images/suites_and_sweets_photos/Vivian Xu (Front L), James Carrabino (Back L), Stefan Jones (Front R), Allen Chang (Back R).jpg" alt="Vivian Xu, James Carrabino, Stefan Jones, Allen Chang"></div>
+                                        <div class="slide"><img src="images/suites_and_sweets_photos/Vivian Xu, James Carrabino, Allen Chang, Stefan Jones.jpg" alt="Vivian Xu, James Carrabino, Allen Chang, Stefan Jones"></div>
+                                        <div class="slide"><img src="images/suites_and_sweets_photos/Yasheen Gao and Laura Street.png" alt="Yasheen Gao and Laura Street"></div>
+                                        <div class="slide"><img src="images/suites_and_sweets_photos/Zeynep Karacan and Kenneth Xu.jpg" alt="Zeynep Karacan and Kenneth Xu"></div>
                                     </div>
                                 </div>
                                 <button class="slider-btn slider-next">&#8250;</button>
@@ -462,6 +472,26 @@
             </script>
 
             <script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
+
+            <script>
+            // Photo Wall — add filenames here as you upload photos to the images/photowall_photos/ folder
+            (function() {
+                var photos = [
+                    'tap_night_fall25_1.png',
+                    'tap_night_fall25_2.png',
+                    'tap_night_fall25_3.png',
+                    'tap_night_fall25_4.png',
+                ];
+                var grid = document.getElementById('photowall_photos-grid');
+                if (!grid || photos.length === 0) return;
+                photos.forEach(function(filename) {
+                    var img = document.createElement('img');
+                    img.src = 'images/photowall_photos/' + filename;
+                    img.alt = filename.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
+                    grid.appendChild(img);
+                });
+            })();
+            </script>
 
             <script>
             (function() {
