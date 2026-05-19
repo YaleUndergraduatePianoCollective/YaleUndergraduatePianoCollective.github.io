@@ -261,6 +261,46 @@ a.special:not(.button):before {
     color: var(--text-dark);
 }
 
+/* 3-column grid variant */
+.features.features-3col article {
+    width: calc(33.333% - 1.334em);
+    margin-right: 2em;
+}
+
+.features.features-3col article:nth-child(2n) {
+    margin-right: 2em;
+}
+
+.features.features-3col article:nth-child(3n) {
+    margin-right: 0;
+}
+
+@media screen and (max-width: 980px) {
+    .features.features-3col article {
+        width: calc(33.333% - 1em);
+        margin-right: 1.5em;
+    }
+    .features.features-3col article:nth-child(2n) {
+        margin-right: 1.5em;
+    }
+    .features.features-3col article:nth-child(3n) {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .features.features-3col article {
+        width: calc(50% - 0.875em - 1px);
+        margin-right: 1.75em;
+    }
+    .features.features-3col article:nth-child(2n) {
+        margin-right: 0;
+    }
+    .features.features-3col article:nth-child(3n) {
+        margin-right: 1.75em;
+    }
+}
+
 /* =============================================
    MENU (mobile overlay panel)
    ============================================= */
@@ -431,3 +471,63 @@ textarea:focus {
     border-color: var(--yale-blue);
     box-shadow: 0 0 0 2px rgba(0, 53, 107, 0.12);
 }
+
+/* =============================================
+   PHOTO SLIDER
+   ============================================= */
+
+.photo-slider {
+    position: relative;
+    background: var(--bg-light);
+    margin-bottom: 2.5em;
+    display: flex;
+    align-items: center;
+}
+
+.slider-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slider-track .slide {
+    min-width: 100%;
+    height: 520px;
+    flex-shrink: 0;
+}
+
+.slider-track .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #ffffff !important;
+    font-size: 5em;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.05em 0.25em;
+    transition: color 0.2s;
+    font-weight: 300;
+}
+
+.slider-btn:hover {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.slider-prev { left: 0.25em; }
+.slider-next { right: 0.25em; }
