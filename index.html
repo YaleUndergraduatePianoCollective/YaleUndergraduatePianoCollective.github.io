@@ -1,184 +1,143 @@
-<!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Yale Undergraduate Piano Collective</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-	
-	<link rel="stylesheet" href="assets/css/main.css" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Yale Undergraduate Piano Collective</title>
+	<meta name="description" content="Yale College's premier community and performance group for undergraduate pianists." />
+	<meta name="theme-color" content="#00356b" />
+	<link rel="icon" href="images/homepage_photos/undergrad_logo.png" />
+	<link rel="stylesheet" href="assets/css/yupc.css" />
+</head>
+<body class="has-intro">
 
-	
-	<link rel="stylesheet" href="assets/css/theme.css" />
-	
-	<link rel="icon" href="http://yalepiano.org/images/homepage_photos/undergrad_logo.png" />
-		<style>
-			/* Home page only: unified hero with photo behind nav + banner */
-			#hero-wrapper {
-				background-image: url('images/homepage_photos/hendrie_hall.jpg');
-				background-size: cover;
-				background-position: center;
-			}
-			#hero-wrapper #header {
-				background-color: transparent !important;
-				background-image: none !important;
-			}
-			#hero-wrapper #header nav a {
-				font-weight: 700;
-			}
-			#hero-wrapper #banner {
-				background-color: transparent !important;
-				background-image: none !important;
-			}
-			#banner p {
-				color: #ffffff !important;
-				font-weight: 700 !important;
-				text-shadow: 0 1px 6px rgba(0,0,0,0.5);
-			}
-		</style>
-	</head>
-	<body>
+	<!-- Navigation -->
+	<header class="nav">
+		<a class="nav__brand" href="index.html"><img src="images/homepage_photos/undergrad_logo.png" alt="YUPC logo" /><span>Yale Undergraduate Piano Collective</span></a>
+		<nav class="nav__links">
+			<a href="about.html">About</a>
+			<a href="events.html">Events</a>
+			<a href="media.html">Media</a>
+			<a href="join.html">Join</a>
+			<a href="support.html">Support</a>
+		</nav>
+		<button class="nav__burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+	</header>
+	<div class="menu">
+		<a href="index.html">Home</a>
+		<a href="about.html">About</a>
+		<a href="events.html">Events</a>
+		<a href="media.html">Media</a>
+		<a href="join.html">Join</a>
+		<a href="support.html">Support</a>
+	</div>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+	<!-- Intro: navy → logo → welcome text (sequence timed in assets/js/yupc.js) -->
+	<section class="intro">
+		<div class="intro__inner">
+			<h1 class="intro__title"><small>Welcome to the</small>Yale Undergraduate Piano Collective</h1>
+			<img class="intro__logo" src="images/homepage_photos/undergrad_logo.png" alt="Yale Undergraduate Piano Collective logo" />
+		</div>
+		<a class="intro__scroll" href="#home"><i></i>Scroll</a>
+	</section>
 
-				<!-- Hero: header + banner share one background image -->
-				<div id="hero-wrapper">
+	<main id="home">
 
-					<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html"><img src="images/homepage_photos/undergrad_logo.png" alt="YUPC" /></a></h1>
-                        <nav>
-							<a href="about.html">About</a>
-                            <a href="events.html">Events</a>
-							<a href="media.html">Media</a>
-							<a href="members.html">Members</a>
-							<a href="join.html">Join</a>
-                            <a href="support.html">Support</a>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+		<!-- Tagline -->
+		<section class="section">
+			<div class="container">
+				<p class="eyebrow" data-reveal>Est. 2017 · New Haven, CT</p>
+				<h2 data-reveal style="max-width:20ch">Yale College's premier community and performance group for <em>undergraduate pianists.</em></h2>
+			</div>
+		</section>
 
-					<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="logo">
-                                <img src="images/homepage_photos/undergrad_logo.png"></img>
-                            </div>
-							<p style="white-space: nowrap; font-weight: 700;">Yale College's premier community and performance group for undergraduate pianists</p>
-						</div>
-					</section>
+		<!-- Ribbon -->
+		<div class="ribbon" aria-hidden="true">
+			<div class="ribbon__track">
+				<span>Masterclasses</span><span>Studio Classes</span><span>Duets &amp; Donuts</span><span>Duos Concerts</span><span>New Member Showcase</span><span>Sight-reading Parties</span>
+				<span>Masterclasses</span><span>Studio Classes</span><span>Duets &amp; Donuts</span><span>Duos Concerts</span><span>New Member Showcase</span><span>Sight-reading Parties</span>
+			</div>
+		</div>
 
-				</div><!-- /hero-wrapper -->
+		<!-- What we do -->
+		<section class="section">
+			<div class="container split">
+				<div class="arch arch--tilt" data-reveal="left"><img src="images/homepage_photos/1.jpg" alt="YUPC members after a concert" /></div>
+				<div class="prose" data-reveal="right">
+					<p class="eyebrow"><span class="numeral">I.</span>What we do</p>
+					<h2>A community of pianists who play <em>for and with</em> each other.</h2>
+					<p>YUPC is a community of pianists at Yale College who convene regularly to perform for and with each other. Started in 2017 by Rishi Mirchandani, we set out to bring together the wide variety of piano talent in Yale College through performances, studio classes, sight-reading sessions, and, excitingly, our semesterly masterclass series. We have fun and create lasting memories!</p>
+					<a href="about.html" class="arrow-link">About the collective</a>
+				</div>
+			</div>
+		</section>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="events.html">Events</a></li>
-								<li><a href="media.html">Media</a></li>
-								<li><a href="members.html">Members</a></li>
-								<li><a href="join.html">Join</a></li>
-								<li><a href="support.html">Support</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
+		<!-- Upcoming events -->
+		<section class="section">
+			<div class="container">
+				<div class="section__head" data-reveal>
+					<div>
+						<p class="eyebrow"><span class="numeral">II.</span>Coming up</p>
+						<h2>Upcoming <em>events</em></h2>
+					</div>
+					<a href="events.html" class="arrow-link">Full calendar</a>
+				</div>
+				<div class="events" id="home-upcoming" data-limit="4" data-reveal></div>
+			</div>
+		</section>
 
-				<!-- Wrapper -->
-					<section id="wrapper">
-						<!-- Promo Video -->
-						<section id="promo-video" style="background:#000; padding:40px 20px;">
-						<div class="inner" style="max-width:1200px; margin:0 auto; text-align:center;">
-							<h2 style="font-size:2em; color:#00356b; margin-bottom:16px;">Introducing... YUPC!</h2>
-							<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,.25);">
-							<iframe
-								src="https://www.youtube.com/embed/8W7zWY004Rw"
-								title="YUPC Promo Video"
-								loading="lazy"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								allowfullscreen
-								style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;">
-							</iframe>
-							</div>
-						</div>
-						</section>
+		<!-- Promo video -->
+		<section class="section">
+			<div class="container">
+				<div class="section__head" data-reveal>
+					<div>
+						<p class="eyebrow"><span class="numeral">III.</span>Introducing</p>
+						<h2>YUPC in <em>two minutes</em></h2>
+					</div>
+				</div>
+				<div class="video-frame" data-reveal>
+					<iframe src="https://www.youtube.com/embed/8W7zWY004Rw" title="YUPC Promo Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				</div>
+			</div>
+		</section>
 
-						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<a href="about.html" class="image"><img src="images/homepage_photos/1.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">What we do</h2>
-										<p>YUPC is a community of pianists at Yale College who convene regularly to perform for and with each other. Started in 2017 by Rishi Mirchandani, we set to bring together the wide variety of piano talent present in yale college's class through performances, studio classes, sight-reading sessions, and, excitingly, our semesterly masterclass series! We have fun and create lasting memories!</p>
-										<a href="about.html" class="special">Learn More</a>
-										
-                                    </div>
-								</div>
-							</section>
-										
+		<!-- Join -->
+		<section class="section">
+			<div class="container split split--rev">
+				<div class="arch" data-reveal="right"><img src="images/homepage_photos/2.jpg" alt="YUPC members dressed for a concert" /></div>
+				<div class="prose" data-reveal="left">
+					<p class="eyebrow"><span class="numeral">IV.</span>Join</p>
+					<h2>All undergraduate pianists are <em>invited to apply.</em></h2>
+					<p>YUPC strives to be a welcoming organization, and all undergraduate pianists are invited to apply! The application process, which takes place each fall, is designed to be manageable and rewarding.</p>
+					<a href="join.html" class="btn">How to join</a>
+				</div>
+			</div>
+		</section>
 
-						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="join.html" class="image"><img src="images/homepage_photos/2.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Join YUPC!</h2>
-										<p>YUPC strives to be a welcoming organization, and all undergraduate pianists are invited to apply! The application process, which takes place each fall, is designed to be manageable and rewarding.</p>
-										<a href="join.html" class="special">Learn More</a>
-									</div>
-								</div>
-							</section>
+	</main>
 
-						<!-- Three -->
-							<section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-									<a href="performances.html" class="image"><img src="images/homepage_photos/3.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Events</h2>
-										<p>YUPC will be organizing a variety of exciting events this year, both musical and social. Join us for masterclasses, public performances, sight-reading parties, and more!</p>
-										<a href="events.html" class="special">Learn More</a>
-									</div>
-								</div>
-							</section>
+	<!-- Footer -->
+	<footer class="footer" id="contact">
+		<div class="container footer__grid">
+			<div data-reveal>
+				<p class="eyebrow">Get in touch</p>
+				<h2>Want to learn <em>more</em> about YUPC?</h2>
+				<p class="muted">We'd love to hear from you, whether you're a prospective member, a fellow music group, or a friend of the collective.</p>
+			</div>
+			<ul class="footer__links" data-reveal>
+				<li><a href="mailto:yaleugradpianocollective@gmail.com">Email</a><small>yaleugradpianocollective@gmail.com</small></li>
+				<li><a href="https://www.instagram.com/yale.piano/" target="_blank" rel="noopener">Instagram</a><small>@yale.piano</small></li>
+				<li><a href="https://www.youtube.com/@yalepiano" target="_blank" rel="noopener">YouTube</a><small>@yalepiano</small></li>
+				<li><a href="https://yaleconnect.yale.edu/YCYUPianoCollective/club_signup" target="_blank" rel="noopener">YaleConnect</a><small>Join our group</small></li>
+			</ul>
+		</div>
+		<div class="container footer__bottom">
+			<span>&copy; 2026 Yale Undergraduate Piano Collective. All rights reserved.</span>
+			<img src="images/homepage_photos/undergrad_logo.png" alt="" />
+		</div>
+	</footer>
 
-
-
-					</section>
-
-             <!-- Footer -->
-                <section id="footer">
-                    <div class="inner">
-                        <h2 class="major">Get in Touch</h2>
-                        <p class = "info">Want to learn more about YUPC?
-                        <ul>
-                            <li>Send us an <a href="mailto:yaleugradpianocollective@gmail.com">email</a></li>
-                            <li>Find us on <a href="https://www.instagram.com/yale.piano/">Instagram</a></li>
-                            <li>Find us on <a href="https://www.youtube.com/@yalepiano">YouTube</a></li>
-                            <li>Join our <a href="https://yaleconnect.yale.edu/YCYUPianoCollective/club_signup">YaleConnect</a> group!</li>
-                        </ul>
-			<ul class="copyright">
-                            <li>&copy; 2026 Yale Undergraduate Piano Collective. All rights reserved.</li>
-                        </ul>
-                    </div>
-
-		<!-- Scripts -->
-	
-		<script src="assets/js/skel.min.js"></script>
-	
-		<script src="assets/js/jquery.min.js"></script>
-	
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-	
-		<script src="assets/js/util.js"></script>	
-		<script src="assets/js/main.js"></script>
-			
-	</body>
+	<script src="assets/js/events.js"></script>
+	<script src="assets/js/yupc.js"></script>
+</body>
 </html>

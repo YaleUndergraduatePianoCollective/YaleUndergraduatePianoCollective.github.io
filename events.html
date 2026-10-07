@@ -1,365 +1,158 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Yale Undergraduate Piano Collective - Events</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/theme.css" />
-		<link rel="icon" href="http://yalepiano.org/images/bluekeys.png" />
-	</head>
-	<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Events — Yale Undergraduate Piano Collective</title>
+	<meta name="description" content="Yale College's premier community and performance group for undergraduate pianists." />
+	<meta name="theme-color" content="#00356b" />
+	<link rel="icon" href="images/homepage_photos/undergrad_logo.png" />
+	<link rel="stylesheet" href="assets/css/yupc.css" />
+</head>
+<body>
 
-		<div id="page-wrapper">
+	<!-- Navigation -->
+	<header class="nav">
+		<a class="nav__brand" href="index.html"><img src="images/homepage_photos/undergrad_logo.png" alt="YUPC logo" /><span>Yale Undergraduate Piano Collective</span></a>
+		<nav class="nav__links">
+			<a href="about.html">About</a>
+			<a href="events.html">Events</a>
+			<a href="media.html">Media</a>
+			<a href="join.html">Join</a>
+			<a href="support.html">Support</a>
+		</nav>
+		<button class="nav__burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+	</header>
+	<div class="menu">
+		<a href="index.html">Home</a>
+		<a href="about.html">About</a>
+		<a href="events.html">Events</a>
+		<a href="media.html">Media</a>
+		<a href="join.html">Join</a>
+		<a href="support.html">Support</a>
+	</div>
 
-			<!-- Header -->
-			<header id="header" class="alt">
-				<h1><a href="index.html"><img src="images/homepage_photos/undergrad_logo.png" alt="YUPC" /></a></h1>
-				<nav>
-					<a href="about.html">About</a>
-					<a href="events.html">Events</a>
-					<a href="media.html">Media</a>
-					<a href="members.html">Members</a>
-					<a href="join.html">Join</a>
-					<a href="support.html">Support</a>
-					<a href="#menu">Menu</a>
-				</nav>
-			</header>
+	<section class="hero">
+		<div class="container">
+			<p class="eyebrow">Calendar</p>
+			<h1>Events</h1>
+			<p class="lede">Concerts, masterclasses, and the occasional donut.</p>
+		</div>
+	</section>
 
-			<!-- Menu -->
-			<nav id="menu">
-				<div class="inner">
-					<h2>Menu</h2>
-					<ul class="links">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="events.html">Events</a></li>
-						<li><a href="media.html">Media</a></li>
-						<li><a href="members.html">Members</a></li>
-						<li><a href="join.html">Join</a></li>
-						<li><a href="support.html">Support</a></li>
-					</ul>
-					<a href="#" class="close">Close</a>
+	<main>
+		<section class="section">
+			<div class="container">
+				<div class="section__head" data-reveal>
+					<h2>Upcoming</h2>
+					<p class="muted small" style="margin:0">Looking for Yale School of Music concerts? Find them <a href="https://music.yale.edu/events" target="_blank" rel="noopener" style="color:var(--gold)">here</a>.</p>
 				</div>
-			</nav>
+				<div class="events" id="upcoming-list" data-reveal></div>
+			</div>
+		</section>
 
-			<!-- Wrapper -->
-			<section id="wrapper">
-				<header>
-					<div class="inner">
-						<h2>Events</h2>
-						<p>Schedule of past and upcoming performances, masterclasses, and social events</p>
+		<section class="section">
+			<div class="container">
+				<div class="section__head" data-reveal><h2>Past</h2></div>
+				<div class="events" id="past-list" data-reveal></div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<div class="section__head" data-reveal>
+					<div>
+						<p class="eyebrow">Masterclass series</p>
+						<h2>Guest <em>artists</em></h2>
 					</div>
-				</header>
-
-				<!-- Section Tab Navigation -->
-				<div class="section-tabs">
-					<button class="tab-btn active" data-tab="events">Events</button>
-					<button class="tab-btn" data-tab="masterclass-archive">Masterclass Features</button>
+					<p class="muted small" style="max-width:44ch;margin:0">YUPC proudly hosts world-renowned pianists in a semesterly masterclass series, open to the public. Special thanks to Professor Weiyi Yang for co-coordinating the series with Masterclass Director Cristian Makhuli.</p>
 				</div>
 
-				<!-- ================================================ -->
-				<!-- TAB 1: Events Table                               -->
-				<!-- ================================================ -->
-				<section id="tab-events" class="tab-content wrapper style1">
-					<div class="inner">
-						<p>Find concerts hosted by the Yale School of Music <a href="https://music.yale.edu/events" target="_blank" rel="noopener noreferrer">here</a>.</p>
-						<!-- Filters -->
-						<div class="event-filters">
-							<div class="filter-group">
-								<button class="filter-btn status-btn" data-status="upcoming">Upcoming</button>
-								<button class="filter-btn status-btn" data-status="past">Past</button>
-							</div>
-							<div class="filter-separator"></div>
-							<div class="filter-group">
-								<button class="filter-btn category-btn" data-category="masterclass">Masterclasses</button>
-								<button class="filter-btn category-btn" data-category="recital">Recitals</button>
-								<button class="filter-btn category-btn" data-category="social">Social Events</button>
-							</div>
-						</div>
-
-						<!-- No events message -->
-						<div id="no-events-msg" style="display:none">
-							<p><i>No events match the selected filters.</i></p>
-						</div>
-
-						<!-- Event List -->
-						<div class="event-list" id="event-list">
-
-							<!-- Spring 2026 Duos Concert -->
-							<div class="event-row" data-category="recital" data-status="past">
-								<div class="event-date">Tuesday,<br>April 28, 2026</div>
-								<div class="event-info">
-									<h3>Spring 2026 Duos Concert</h3>
-									<p>Wrap up the semester with an evening of duets and four hands ensemble pieces performed by pairs of YUPC members and friends!</p>
-								</div>
-								<div class="event-time-loc">
-									<div class="time">8:00 – 9:00 PM</div>
-									<div class="location">Hendrie Hall,<br>Parker Recital Hall</div>
-								</div>
-							</div>
-
-							<!-- Jose Ramon Mendez Masterclass -->
-							<div class="event-row" data-category="masterclass" data-status="past">
-								<div class="event-date">Saturday,<br>April 11, 2026</div>
-								<div class="event-info">
-									<h3>Jose Ramon Mendez Masterclass</h3>
-									<p>Jose Ramon Mendez, Professor of Piano at Oberlin Conservatory. Brunch together at Silliman Dining Hall at 11:00 AM.</p>
-									<a class="event-details-link" href="https://cglink.me/2dA/r2314938" target="_blank" rel="noopener noreferrer">View Event Details</a>
-								</div>
-								<div class="event-time-loc">
-									<div class="time">12:00 – 2:00 PM</div>
-									<div class="location">Silliman College,<br>Common Room</div>
-								</div>
-							</div>
-
-							<!-- Melvin Chen Masterclass -->
-							<div class="event-row" data-category="masterclass" data-status="past">
-								<div class="event-date">Saturday,<br>March 28, 2026</div>
-								<div class="event-info">
-									<h3>Melvin Chen Masterclass</h3>
-									<p>Melvin Chen, Professor of Piano at the Yale School of Music. Brunch together at Silliman Dining Hall at 11:00 AM.</p>
-									<a class="event-details-link" href="https://cglink.me/2dA/r2314932" target="_blank" rel="noopener noreferrer">View Event Details</a>
-								</div>
-								<div class="event-time-loc">
-									<div class="time">12:00 – 2:00 PM</div>
-									<div class="location">Silliman College,<br>Common Room</div>
-								</div>
-							</div>
-
-							<!-- Keiko Sekino Masterclass -->
-							<div class="event-row" data-category="masterclass" data-status="past">
-								<div class="event-date">Saturday,<br>February 14, 2026</div>
-								<div class="event-info">
-									<h3>Keiko Sekino Masterclass</h3>
-									<p>Keiko Sekino, Professor of Piano at East Carolina University. Brunch together at Silliman Dining Hall at 11:00 AM.</p>
-									<a class="event-details-link" href="https://cglink.me/2dA/r2314931" target="_blank" rel="noopener noreferrer">View Event Details</a>
-								</div>
-								<div class="event-time-loc">
-									<div class="time">12:00 – 2:00 PM</div>
-									<div class="location">Silliman College,<br>Common Room</div>
-								</div>
-							</div>
-
-							<!-- Young Kim Masterclass -->
-							<div class="event-row" data-category="masterclass" data-status="past">
-								<div class="event-date">Saturday,<br>November 15, 2025</div>
-								<div class="event-info">
-									<h3>Young Kim Masterclass</h3>
-									<p>Young Kim, Professor of Piano at Skidmore College. Brunch together at Silliman Dining Hall at 11:00 AM.</p>
-									<a class="event-details-link" href="https://cglink.me/2dA/r2308851" target="_blank" rel="noopener noreferrer">View Event Details</a>
-								</div>
-								<div class="event-time-loc">
-									<div class="time">12:00 – 2:00 PM</div>
-									<div class="location">Silliman College,<br>Common Room</div>
-								</div>
-							</div>
-
-							<!-- Anne-Marie McDermott Masterclass -->
-							<div class="event-row" data-category="masterclass" data-status="past">
-								<div class="event-date">Saturday,<br>November 1, 2025</div>
-								<div class="event-info">
-									<h3>Anne-Marie McDermott Masterclass</h3>
-									<p>Anne-Marie McDermott, Artistic Director of the Bravo! Vail Music Festival. Brunch together at Silliman Dining Hall at 11:00 AM.</p>
-									<a class="event-details-link" href="https://cglink.me/2dA/r2308799" target="_blank" rel="noopener noreferrer">View Event Details</a>
-								</div>
-								<div class="event-time-loc">
-									<div class="time">12:00 – 2:00 PM</div>
-									<div class="location">Silliman College,<br>Common Room</div>
-								</div>
-							</div>
-
-							<!-- New Member Showcase -->
-							<div class="event-row" data-category="recital" data-status="past">
-								<div class="event-date">Sunday,<br>October 12, 2025</div>
-								<div class="event-info">
-									<h3>2025-26 New Member Showcase</h3>
-									<p>Celebrating our amazing new members with an evening of wonderful pieces played by YUPC's future leaders at Sudler Recital Hall.</p>
-								</div>
-								<div class="event-time-loc">
-									<div class="time">7:00 – 9:00 PM</div>
-									<div class="location">Sudler Recital Hall<br>(WLH 201)</div>
-								</div>
-							</div>
-
-							<!-- Boris Berman Masterclass -->
-							<div class="event-row" data-category="masterclass" data-status="past">
-								<div class="event-date">Saturday,<br>October 4, 2025</div>
-								<div class="event-info">
-									<h3>Boris Berman Masterclass</h3>
-									<p>Boris Berman, Sylvia and Leonard Marx Professor of Piano at the Yale School of Music. Brunch together at Silliman Dining Hall at 11:00 AM.</p>
-									<a class="event-details-link" href="https://cglink.me/2dA/r2306649" target="_blank" rel="noopener noreferrer">View Event Details</a>
-								</div>
-								<div class="event-time-loc">
-									<div class="time">12:00 – 2:00 PM</div>
-									<div class="location">Silliman College,<br>Common Room</div>
-								</div>
-							</div>
-
-						</div><!-- /event-list -->
+				<p class="eyebrow" data-reveal>Fall 2026</p>
+				<div class="guests" style="margin-bottom:4rem">
+					<div class="guest" data-reveal>
+						<img class="guest__img" src="images/masterclass_photos/jeffrey_cohen.jpg" alt="Jeffrey Cohen" data-initials="JC" />
+						<h3>Jeffrey Cohen</h3>
+						<p>Performers to be announced</p>
+						<span class="ev__date">Saturday · Nov 7, 2026</span>
 					</div>
-				</section>
-
-				<!-- ================================================ -->
-				<!-- TAB 2: Masterclass Features                        -->
-				<!-- ================================================ -->
-				<div id="tab-masterclass-archive" class="tab-content" style="display:none">
-
-					<section class="wrapper style1">
-						<div class="inner align-center">
-							<h2 class="major">Spring 2026 Masterclass Series!</h2>
-							<p>
-							YUPC proudly hosts world-renowned pianists in this masterclass series with an exciting lineup of performances open to the public at Silliman College!
-                            <br><br>
-							Special thanks to Professor Weiyi Yang for co-coordinating this series with 2025-26 Masterclass Director Cristian Makhuli.
-							</p>
-							<div class="event-container">
-							<div class="event-box">
-								<img class="event-img" src="images/masterclass_photos/keiko_sekino.jpg" alt="Keiko Sekino">
-								<h3 class="event-title">Keiko Sekino</h3>
-								<p class="event-meta"><strong>Date:</strong> February 14th, 2026, 12:00-2:00 PM, Brunch @ 11</p>
-								<p class="event-meta"><strong>Location:</strong> <a href="https://silliman.yalecollege.yale.edu/" target="_blank" rel="noopener noreferrer">Silliman College, Common Room</a></p>
-								<a class="button special" href="https://cglink.me/2dA/r2314931" target="_blank" rel="noopener noreferrer">View Event</a>
-							</div>
-							<div class="event-box">
-								<img class="event-img" src="images/masterclass_photos/melvin_chen.jpg" alt="Melvin Chen">
-								<h3 class="event-title">Melvin Chen</h3>
-								<p class="event-meta"><strong>Date:</strong> March 28th, 2026, 12:00-2:00 PM, Brunch @ 11</p>
-								<p class="event-meta"><strong>Location:</strong> <a href="https://silliman.yalecollege.yale.edu/" target="_blank" rel="noopener noreferrer">Silliman College, Common Room</a></p>
-								<a class="button special" href="https://cglink.me/2dA/r2314932" target="_blank" rel="noopener noreferrer">View Event</a>
-							</div>
-							<div class="event-box">
-								<img class="event-img" src="images/masterclass_photos/jose_ramon_mendez.jpg" alt="Jose Ramon Mendez">
-								<h3 class="event-title">Jose Ramon Mendez</h3>
-								<p class="event-meta"><strong>Date:</strong> April 11th, 2026, 12:00-2:00 PM, Brunch @ 11</p>
-								<p class="event-meta"><strong>Location:</strong> <a href="https://silliman.yalecollege.yale.edu/" target="_blank" rel="noopener noreferrer">Silliman College, Common Room</a></p>
-								<a class="button special" href="https://cglink.me/2dA/r2314938" target="_blank" rel="noopener noreferrer">View Event</a>
-							</div>
-							</div>
-						</div>
-					</section>
-
-					<section class="wrapper style2">
-						<div class="inner align-center">
-							<h2 class="major">Fall 2025 Masterclass Series!</h2>
-							<p>YUPC proudly hosts world-renowned pianists in this masterclass series with an exciting lineup of performances open to the public at Silliman College!
-							<br><br>
-							Special thanks to Professor Weiyi Yang for co-coordinating this series with 2025-26 Masterclass Director Cristian Makhuli.
-							</p>
-							<div class="event-container">
-							<div class="event-box">
-								<img class="event-img" src="images/masterclass_photos/boris_berman.jpeg" alt="Boris Berman">
-								<h3 class="event-title">Boris Berman</h3>
-								<p class="event-meta"><strong>Date:</strong> October 4th, 2025, 12:00-2:00 PM, Brunch @ 11</p>
-								<p class="event-meta"><strong>Location:</strong> <a href="https://silliman.yalecollege.yale.edu/" target="_blank" rel="noopener noreferrer">Silliman College, Common Room</a></p>
-								<a class="button special" href="https://cglink.me/2dA/r2306649" target="_blank" rel="noopener noreferrer">View Event</a>
-							</div>
-							<div class="event-box">
-								<img class="event-img" src="images/masterclass_photos/anne-marie_mcdermott.jpg" alt="Anne-Marie McDermott">
-								<h3 class="event-title">Anne-Marie McDermott</h3>
-								<p class="event-meta"><strong>Date:</strong> November 1st, 2025, 12:00-2:00 PM, Brunch @ 11</p>
-								<p class="event-meta"><strong>Location:</strong> <a href="https://silliman.yalecollege.yale.edu/" target="_blank" rel="noopener noreferrer">Silliman College, Common Room</a></p>
-								<a class="button special" href="https://cglink.me/2dA/r2308799" target="_blank" rel="noopener noreferrer">View Event</a>
-							</div>
-							<div class="event-box">
-								<img class="event-img" src="images/masterclass_photos/young_kim.jpeg" alt="Young Kim">
-								<h3 class="event-title">Young Kim</h3>
-								<p class="event-meta"><strong>Date:</strong> November 15th, 2025, 12:00-2:00 PM, Brunch @ 11</p>
-								<p class="event-meta"><strong>Location:</strong> <a href="https://silliman.yalecollege.yale.edu/" target="_blank" rel="noopener noreferrer">Silliman College, Common Room</a></p>
-								<a class="button special" href="https://cglink.me/2dA/r2308851" target="_blank" rel="noopener noreferrer">View Event</a>
-							</div>
-							</div>
-						</div>
-					</section>
-
-
-				</div><!-- /tab-masterclass-archive -->
-
-			</section><!-- /wrapper -->
-
-			<!-- Footer -->
-			<section id="footer">
-				<div class="inner">
-					<h2 class="major">Get in Touch</h2>
-					<p class="info">Want to learn more about YUPC?
-					<ul>
-						<li>Send us an <a href="mailto:yaleugradpianocollective@gmail.com">email</a></li>
-						<li>Find us on <a href="https://www.instagram.com/yale.piano/">Instagram</a></li>
-						<li>Find us on <a href="https://www.youtube.com/@yalepiano">YouTube</a></li>
-						<li>Join our <a href="https://yaleconnect.yale.edu/YCYUPianoCollective/club_signup">YaleConnect</a> group!</li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; 2026 Yale Undergraduate Piano Collective. All rights reserved.</li>
-					</ul>
+					<div class="guest" data-reveal>
+						<img class="guest__img" src="images/masterclass_photos/michelle_cann.jpg" alt="Michelle Cann" data-initials="MC" />
+						<h3>Michelle Cann</h3>
+						<p>Performers to be announced</p>
+						<span class="ev__date">Saturday · Dec 5, 2026</span>
+					</div>
 				</div>
-			</section>
 
-		</div><!-- /page-wrapper -->
+				<p class="eyebrow" data-reveal>Spring 2026</p>
+				<div class="guests" style="margin-bottom:4rem">
+					<div class="guest" data-reveal>
+						<img class="guest__img" src="images/masterclass_photos/keiko_sekino.jpg" alt="Keiko Sekino" data-initials="KS" />
+						<h3>Keiko Sekino</h3>
+						<p>Professor of Piano, East Carolina University</p>
+						<span class="ev__date">Feb 14, 2026 · Silliman College</span>
+					</div>
+					<div class="guest" data-reveal>
+						<img class="guest__img" src="images/masterclass_photos/melvin_chen.jpg" alt="Melvin Chen" data-initials="MC" />
+						<h3>Melvin Chen</h3>
+						<p>Professor of Piano, Yale School of Music</p>
+						<span class="ev__date">Mar 28, 2026 · Silliman College</span>
+					</div>
+					<div class="guest" data-reveal>
+						<img class="guest__img" src="images/masterclass_photos/jose_ramon_mendez.jpg" alt="Jose Ramon Mendez" data-initials="JM" />
+						<h3>Jose Ramon Mendez</h3>
+						<p>Professor of Piano, Oberlin Conservatory</p>
+						<span class="ev__date">Apr 11, 2026 · Silliman College</span>
+					</div>
+				</div>
 
-		<!-- Scripts -->
-		<script src="assets/js/skel.min.js"></script>
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+				<p class="eyebrow" data-reveal>Fall 2025</p>
+				<div class="guests">
+					<div class="guest" data-reveal>
+						<img class="guest__img" src="images/masterclass_photos/boris_berman.jpeg" alt="Boris Berman" data-initials="BB" />
+						<h3>Boris Berman</h3>
+						<p>Sylvia and Leonard Marx Professor of Piano, Yale School of Music</p>
+						<span class="ev__date">Oct 4, 2025 · Silliman College</span>
+					</div>
+					<div class="guest" data-reveal>
+						<img class="guest__img" src="images/masterclass_photos/anne-marie_mcdermott.jpg" alt="Anne-Marie McDermott" data-initials="AM" />
+						<h3>Anne-Marie McDermott</h3>
+						<p>Artistic Director, Bravo! Vail Music Festival</p>
+						<span class="ev__date">Nov 1, 2025 · Silliman College</span>
+					</div>
+					<div class="guest" data-reveal>
+						<img class="guest__img" src="images/masterclass_photos/young_kim.jpeg" alt="Young Kim" data-initials="YK" />
+						<h3>Young Kim</h3>
+						<p>Professor of Piano, Skidmore College</p>
+						<span class="ev__date">Nov 15, 2025 · Silliman College</span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
 
-		<!-- Tab switching + event filtering -->
-		<script>
-		(function() {
-			// Tab switching
-			document.querySelectorAll('.tab-btn').forEach(function(btn) {
-				btn.addEventListener('click', function() {
-					document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
-					document.querySelectorAll('.tab-content').forEach(function(s) { s.style.display = 'none'; });
-					this.classList.add('active');
-					document.getElementById('tab-' + this.dataset.tab).style.display = '';
-				});
-			});
+	<!-- Footer -->
+	<footer class="footer" id="contact">
+		<div class="container footer__grid">
+			<div data-reveal>
+				<p class="eyebrow">Get in touch</p>
+				<h2>Want to learn <em>more</em> about YUPC?</h2>
+				<p class="muted">We'd love to hear from you, whether you're a prospective member, a fellow music group, or a friend of the collective.</p>
+			</div>
+			<ul class="footer__links" data-reveal>
+				<li><a href="mailto:yaleugradpianocollective@gmail.com">Email</a><small>yaleugradpianocollective@gmail.com</small></li>
+				<li><a href="https://www.instagram.com/yale.piano/" target="_blank" rel="noopener">Instagram</a><small>@yale.piano</small></li>
+				<li><a href="https://www.youtube.com/@yalepiano" target="_blank" rel="noopener">YouTube</a><small>@yalepiano</small></li>
+				<li><a href="https://yaleconnect.yale.edu/YCYUPianoCollective/club_signup" target="_blank" rel="noopener">YaleConnect</a><small>Join our group</small></li>
+			</ul>
+		</div>
+		<div class="container footer__bottom">
+			<span>&copy; 2026 Yale Undergraduate Piano Collective. All rights reserved.</span>
+			<img src="images/homepage_photos/undergrad_logo.png" alt="" />
+		</div>
+	</footer>
 
-			// Multiselect filter logic
-			function getActive(selector) {
-				var active = [];
-				document.querySelectorAll(selector).forEach(function(btn) {
-					if (btn.classList.contains('active')) active.push(btn.dataset.status || btn.dataset.category);
-				});
-				return active;
-			}
-
-			var allStatuses = ['upcoming', 'past'];
-			var allCategories = ['masterclass', 'recital', 'social'];
-
-			function applyFilters() {
-				var activeStatuses  = getActive('.status-btn');
-				var activeCategories = getActive('.category-btn');
-
-				// If none or all selected, treat as "no filter" for that dimension
-				var filterStatus   = activeStatuses.length > 0 && activeStatuses.length < allStatuses.length;
-				var filterCategory = activeCategories.length > 0 && activeCategories.length < allCategories.length;
-
-				var rows = document.querySelectorAll('.event-row');
-				var visible = 0;
-				rows.forEach(function(row) {
-					var statusOk   = !filterStatus   || activeStatuses.indexOf(row.dataset.status)   !== -1;
-					var categoryOk = !filterCategory || activeCategories.indexOf(row.dataset.category) !== -1;
-					var show = statusOk && categoryOk;
-					row.style.display = show ? '' : 'none';
-					if (show) visible++;
-				});
-				document.getElementById('no-events-msg').style.display = visible === 0 ? '' : 'none';
-			}
-
-			document.querySelectorAll('.status-btn, .category-btn').forEach(function(btn) {
-				btn.addEventListener('click', function() {
-					this.classList.toggle('active');
-					applyFilters();
-				});
-			});
-
-			applyFilters();
-		})();
-		</script>
-
-		<script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
-
-	</body>
+	<script src="assets/js/events.js"></script>
+	<script src="assets/js/yupc.js"></script>
+</body>
 </html>
